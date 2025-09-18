@@ -24,7 +24,7 @@ guch1@guch1-NUC11PAHi5:~/ssd_yamaguchi/project_Laplace/gpt-oss$ docker compose u
 Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint ollama-gpt-oss (8aa985998ab5b5ab6b8b133b96d193bf065b312cea012205285691331904b3a0): failed to bind host port for 0.0.0.0:11434:172.20.0.2:11434/tcp: address already in use
 ```
 指定したポート番号(この例だと11434)が既に使用されている場合に発生。　\
-**そもそもポート番号を変更してしまえばこの問題は解決する。**こちらのがおすすめ。 \
+ **そもそもポート番号を変更してしまえばこの問題は解決する。** こちらのがおすすめ。 \
 どうしても変更できない場合、競合している元を止めることで解決するが止めたことによる弊害は不明。ﾕﾙｼﾃ。　\
 競合元を調べて止める方法は、
 ```

@@ -12,7 +12,7 @@ docker ps
 bash llm_install_to_container.sh
 ```
 を実行してインストールしたいモデル名を入力する。
-これで以下の画像のようにsuccessが表示されればインストール完了。
+これで以下の画像のようにsuccessが表示されればインストール完了。 \
 ![モデルインストール完了画面](image/model_install_complete.png)
 
 ### エラー1 ポート番号の競合
@@ -37,7 +37,7 @@ guch1@guch1-NUC11PAHi5:~/ssd_yamaguchi/project_Laplace/gpt-oss$ sudo lsof -i :11
 COMMAND  PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 ollama  1673 ollama    3u  IPv4  14493      0t0  TCP localhost:11434 (LISTEN)
 ```
-のような出力が出る。こいつが原因。この例では既にollamaがホストのPCでポートを使用していた。　
+のような出力が出る。こいつが原因。この例では既にollamaがホストのPCでポートを使用していた。
 よって殺す。
 ```
 sudo systemctl stop ollama

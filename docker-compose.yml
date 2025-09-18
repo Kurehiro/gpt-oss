@@ -1,0 +1,19 @@
+# ~/ssd_yamaguchi/project_Laplace/gpt-oss-standalone/docker-compose.yml
+services:
+  gpt-oss:
+    image: ollama/ollama:latest
+    container_name: ollama-gpt-oss
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    volumes:
+      - ./ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    restart: unless-stopped
+    environment:
+      - OLLAMA_HOST=0.0.0.0 

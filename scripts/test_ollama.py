@@ -1,12 +1,24 @@
 # ~/ssd_yamaguchi/project_Laplace/gpt-oss-standalone/test_ollama.py
 import requests
 import json
+import os
+
+PROMPT_FILE = "prompt.txt"
+
+try:
+    # スクリプトと同じディレクトリにあるプロンプトファイルを読み込む
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    with open(os.path.join(script_dir, PROMPT_FILE), 'r', encoding='utf-8') as f:
+        prompt_text = f.read().strip()
+except FileNotFoundError:
+    print(f"エラー: プロンプトファイル '{PROMPT_FILE}' がスクリプトと同じディレクトリに見つかりません。")
+    exit(1)
 
 url = "http://localhost:11434/api/generate"
 
 data = {
     "model": "gpt-oss:20b",
-    "prompt": "あなたは何のモデル？何ができる？answer in Japanese.",
+    "prompt": prompt_text,
     "stream": True
 }
 

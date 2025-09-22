@@ -1,0 +1,11 @@
+{
+  "prompt_file": "prompt.txt",
+  "additional_info_files": [
+    "add_file.txt",
+    "add_file2.txt"
+  ],
+  "enable_web_search": false,
+  "file_info_priority": "high",
+  "max_file_content_length": 5000,
+  "file_content_summary": false
+}

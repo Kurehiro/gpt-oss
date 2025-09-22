@@ -1,0 +1,7 @@
+{
+  "google_api_key": "846c911c0a796c7b7124441a2e87cfe3d90c87bfb4110d3a07561437e13e1e86",
+  "model_name": "gpt-oss:20b",
+  "ollama_url": "http://localhost:11434",
+  "use_search": true,
+  "stream_mode": true
+}

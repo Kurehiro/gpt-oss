@@ -3,7 +3,7 @@ import requests
 import json
 import os
 
-PROMPT_FILE = "prompt.txt"
+PROMPT_FILE = "prompt_kurehiro.txt"
 
 try:
     # スクリプトと同じディレクトリにあるプロンプトファイルを読み込む
